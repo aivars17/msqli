@@ -12,7 +12,7 @@ if (!$conn) {
 }
 if (isset($_POST['submit'])) {
 		
-		$sql = "INSERT INTO products (name, price, description) VALUES ('".$_POST['Name']."','".$_POST['Price']."','".$_POST['About']."')";
+		$sql = "INSERT INTO products (name, price, description, color, weight, madeIn) VALUES ('".$_POST['Name']."','".$_POST['Price']."','".$_POST['About']."','".$_POST['Color']."','".$_POST['Weight']."','".$_POST['MadeIn']."')";
 
 		mysqli_query($conn, $sql);
 	}
@@ -28,7 +28,14 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        $dbtable .= "<tr class='table-info'><td>" . $row["id"]. "</td><td class='text-center'>" . $row["name"]."</td><td class='text-center'>" . $row["price"]." EUR"."</td><td class='text-center'>".$row["description"]. "</td><td class='text-center'><a class='btn btn-sm btn-danger' href='?delete=".$row['id']."'>delete</a></td></tr>";
+        $dbtable .= "<tr class='table-info'><td>" . $row["id"]. "</td>
+        <td class='text-center'>" . $row["name"]."</td>
+        <td class='text-center'>" . $row["price"]." EUR"."</td>
+        <td class='text-center'>".$row["description"]. "</td>
+        <td class='text-center'>".$row["color"]. "</td>
+        <td class='text-center'>".$row["weight"]. "</td>
+        <td class='text-center'>".$row["madeIn"]. "</td>
+        <td class='text-center'><a class='btn btn-sm btn-danger' href='?delete=".$row['id']."'>delete</a></td></tr>";
     $sum[] = $row["price"]; 
     }
 } else {
