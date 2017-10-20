@@ -1,0 +1,60 @@
+body {
+	background: #b5bdc8;
+background: -moz-linear-gradient(left, #b5bdc8 0%, #828c95 36%, #28343b 100%);
+background: -webkit-linear-gradient(left, #b5bdc8 0%,#828c95 36%,#28343b 100%);
+background: linear-gradient(to right, #b5bdc8 0%,#828c95 36%,#28343b 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=1 );
+}
+.head {
+	padding: 5% 0% 3% 20%;
+	background: #f2f6f8;
+	background: -moz-linear-gradient(-45deg, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%);
+	background: -webkit-linear-gradient(-45deg, #f2f6f8 0%,#d8e1e7 50%,#b5c6d0 51%,#e0eff9 100%);
+	background: linear-gradient(135deg, #f2f6f8 0%,#d8e1e7 50%,#b5c6d0 51%,#e0eff9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=1 );
+} 
+h1 {
+	font-weight: bold;
+	font-size: 80px;
+}
+.cart {
+	display: inline-block;
+	float: left;
+	padding: 10px;
+	margin: 20px;
+	background: lightgrey;
+	border: 1 solid black;
+	border-radius: 8px;
+}
+.name {
+	background: black;
+	color: white;
+	text-align: center;
+	margin: 3px;
+	border-radius: 3px;
+}
+.picture {
+	border-radius: 8px;
+}
+.price {
+	clear: both;
+	border: 2px solid grey;
+	margin: 3px;
+	border-radius: 8px;
+	text-align: center;
+	cursor: pointer;
+	height: 100%;
+	font-weight: bold;
+}
+.price:hover {
+	background: grey;
+}
+.bag {
+	margin: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+	
+}
+.bag:hover {
+	background: grey;
+}

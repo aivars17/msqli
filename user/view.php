@@ -6,11 +6,14 @@
 </head>
 <body>
 	<div class="container-flout">
-		<div class="row"><div class="col"><h1>admin</h1></div></div>
+		<div class="row">
+			<div class="col"><h1>admin</h1></div>
+			<div class="col"><a class=" btn btn-light btn-sm" href="?logout">Logout</a></div>
+		</div>
 		<div class="row">
 			<div class="col-7">
 				<table  class="table table-bordered ">
-					<tr class="table-primary">
+					<tr class="table-success">
 						<th>ID</th>
 						<th class="text-center">Pavadinimas</th>
 						<th class="text-center">Kaina</th>
@@ -18,10 +21,11 @@
 						<th class="text-center">Spalva</th>
 						<th class="text-center">Svoris (g)</th>
 						<th class="text-center">Pagaminimo šalis</th>
-						<th class="text-center">Trinti</th>
+						<th class="text-center">Paveiksliukas</th>
+						<th class="text-center" >Trinti</th>
 					</tr>
 						<?php echo $dbtable;  ?>
-					<tr class="table-success" style="font-weight: bold;">
+					<tr class="table-warning" style="font-weight: bold;">
 						<td colspan="2" class=" text-right">Bendra suma:</td>
 						<td id="total" class='text-center'></td>
 					</tr>
@@ -29,7 +33,7 @@
 			</div>
 			<div class="col-5">
 				<h2>Administratoriaus panele</h2>
-				<form method="POST">
+				<form method="POST" enctype="multipart/form-data">
 					<div class="row">
 						<div class="form-group col">
 						<label for="Pavadinimas">Pavadinimas</label>
@@ -58,6 +62,11 @@
 						<label>Pagaminimo šalis</label>
 						<input class="form-control " type="text" name="MadeIn">
 					</div>
+					<div>
+					 Write new file name
+		      		<input type="text" name="rename"></br>
+				    <input type="file" name="image" >
+				</div>
 					<div class="row">
 						<div class="form-group">
 						<button class="btn col" type="submit" name="submit">Pridėti</button>
@@ -66,9 +75,13 @@
 					</div>
 					
 					
+					
 				</form>
 			
 			</div>
+		</div>
+		<div class="row">
+			<div class="col"><?php $error?></div>
 		</div>
 	</div>
 	
